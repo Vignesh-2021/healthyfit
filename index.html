@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="#">logo</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#"><button>Register</button></a></li> 
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+  <div class="about">
+ <div class="content">
+      <div class="title">OUR SERVICES</div>
+      <p>These topics are common diseases and conditions that evidence shows may be strongly linked to environmental exposures.</p>
+      <p>Inflammation:<br>
+        Inflammation is a normal part of the body’s defense to injury or infection, and, in this way, it is beneficial. But inflammation is damaging when it occurs in healthy tissues or lasts too long.</p>
+      <p>Kidney Disease:<br>
+        An epidemic of chronic kidney disease has emerged that cannot be explained by traditional or known risk factors. Known as CKDu, this disease is a progressive and fatal loss of kidney function. It is found mostly among agricultural workers in hot, humid regions.</p>
+      <p>Lung Diseases:<br>
+        Lung disease refers to several types of diseases or disorders that prevent the lungs from functioning properly. Lung disease can affect respiratory function, or the ability to breathe, and pulmonary function, which is how well lungs work.</p>
+      <p>Obesity:<br>
+        Obesity is a chronic disease that affects more than 30% adults and about 17% of children and adolescents in the United States. Obesity results from a combination of genetic susceptibility, biological pathways related to metabolism and body weight regulation, and environmental factors.</p> 
+      <p>Parkinson's Disease:<br>
+        The National Institute of Environmental Health Sciences (NIEHS) is one of the lead research agencies studying the environmental causes of Parkinson's disease | Parkinson's is a neurodegenerative disease thought to be caused by the interaction of genes and environment.</p>
+    </div>
+  </div>
+
+   <!--footer-->
+ <footer>
+  <div class="content">
+    <div class="top">
+      <div class="logo-details">
+        <span class="logo_name">logo</span>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="link-boxes">
+      <ul class="box">
+        <li class="link_name">Company</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Get started</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Services</li>
+        <li><a href="#">App design</a></li>
+        <li><a href="#">Web design</a></li>
+        <li><a href="#">Logo design</a></li>
+        <li><a href="#">Banner design</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Account</li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">My account</a></li>
+        <li><a href="#">Prefrences</a></li>
+        <li><a href="#">Purchase</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Courses</li>
+        <li><a href="#">HTML & CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">Photography</a></li>
+        <li><a href="#">Photoshop</a></li>
+      </ul>
+      <ul class="box input-box">
+        <li class="link_name">Feedback</li>
+        <li><input type="text" placeholder="Message"></li>
+        <li><input type="button" value="Submit"></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+ <!--footer ends-->
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+</body>
+</html>
